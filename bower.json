@@ -1,0 +1,17 @@
+{
+  "name": "map-dragger",
+  "description": "A Vue.js project",
+  "main": "",
+  "authors": [
+    "zee-german <franz.lutzenberger@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
