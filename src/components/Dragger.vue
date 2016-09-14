@@ -1,5 +1,5 @@
 <template lang="html">
-  <img draggable="false" src="../assets/map.jpg" alt="" class="map"/>
+  <img draggable="false" src="../assets/map.jpg" alt="" id="map"/>
 </template>
 
 <script>
@@ -20,19 +20,19 @@ export default {
 }
 
 function boundaryCalc(map, viewport) {
-  const top = viewport.height() - map.height()
-  const left = viewport.width() - map.width()
+  let top = viewport.height() - map.height()
+  let left = viewport.width() - map.width()
   return [top, 0, 0, left]
 }
 
 function onCreate() {
   $(document).ready( () => {
-    const $map = $('.map')
+    const $map = $('#map')
     const $viewport = $(window)
-    const constrainTo = boundaryCalc($map, $viewport)
+    let constrainTo = boundaryCalc($map, $viewport)
 
     $map.on('load', () => {
-      $map.pep({ constrainTo })
+      $map.pep({ constrainTo, useCSSTranslation: false })
     })
   })
 }
